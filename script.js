@@ -1,5 +1,6 @@
 const $panda = document.querySelector('.panda')
 const $obt = document.querySelector('.obt')
+const $conteiner = document.querySelector('.conteiner')
 click = true
    
 document.addEventListener('keydown', event =>{
@@ -12,6 +13,7 @@ document.addEventListener('keydown', event =>{
         }
     
     }
+
     setTimeout(() =>{
         click = false
         setTimeout(() => {
@@ -19,14 +21,23 @@ document.addEventListener('keydown', event =>{
         },700)
     },0)
 })
-
+$conteiner.addEventListener('click', () =>{
+    $panda.classList.add('pandaAn')
+    setTimeout(() =>{
+    $panda.classList.remove('pandaAn')
+    },700)
+})
 const loop = setInterval(() =>{
     const obt = $obt.offsetLeft;
     const panda = +window.getComputedStyle($panda).bottom.replace('px', '')
     console.log(obt)
     
-    if(obt <= 215 && obt > 87 && panda < 55){
+    if(obt <= 210 && obt > 75 && panda < 50){
         $obt.style.animation = 'none';
         $obt.style.left = `${obt}px`
+
+        $panda.style.animation = 'none'
+        $panda.style.bottom = `${panda}px`
+        clearInterval(loop)
     }
 }, 10)
