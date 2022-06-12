@@ -1,0 +1,56 @@
+*{
+    border: 0;
+    margin: 0;
+    padding:0;
+}
+.conteiner{
+
+    height: 90vh;
+    width: auto;
+    margin: auto;
+    border-bottom: 80px solid rgb(80, 244, 140);
+    background:linear-gradient(rgb(113, 202, 250), rgb(239, 242, 244));
+    position: relative;
+}
+.obt{
+    width: 100px;
+    height: 180px;
+    position: absolute;
+    margin-bottom: 20px;
+    bottom: -100px;
+    animation: obtAN 3s linear infinite;
+}
+.panda{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+
+   
+}
+.pandaAn{
+    animation: pandaAN 0.7s linear infinite;
+}
+@keyframes obtAN{
+    0%{
+        right:-50px
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes pandaAN{
+    0%{
+        bottom:0px;
+    }
+    40%{
+        bottom: 110px;
+    }
+    50%{
+        bottom:120px ;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
