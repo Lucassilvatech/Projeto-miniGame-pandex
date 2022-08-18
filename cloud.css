@@ -1,0 +1,33 @@
+.cloud{
+    position: absolute;
+    right: 6%;
+    animation: cloudAnimation 3.8s linear infinite;
+   
+}
+
+
+.cloud002{
+    position: absolute;
+    right: 60%;
+    animation: cloudAnimation002 5.0s linear infinite; 
+}
+
+@keyframes cloudAnimation {
+    0% {
+        right: -35%
+    }
+
+    100% {
+        right: 60%;
+    }
+}
+
+@keyframes cloudAnimation002 {
+    0% {
+        right: 45%;
+    }
+
+    100% {
+        right: 110%;
+    }
+}
